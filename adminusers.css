@@ -1,0 +1,65 @@
+.user-section {
+  margin: 2rem;
+  background: #ffffffc9;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.user-section h2 {
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.user-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.user-controls input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+}
+
+.user-controls button {
+  background: #a0d2eb;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.user-controls button:hover {
+  background: #74c0fc;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th, td {
+  text-align: left;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  cursor: pointer;
+  background: #f4f4f4;
+  font-weight: bold;
+}
+
+tr:hover {
+  background-color: #f0f8ff;
+}

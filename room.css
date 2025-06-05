@@ -1,0 +1,203 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #a8edea, #fed6e3); /* ✅ Gradient */
+}
+
+/* Main layout container */
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #6D9886, #557C55); /* Same as contact page */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  height: 100vh;
+}
+
+/* Content beside sidebar */
+.main-content {
+  flex: 1;
+  padding: 60px 40px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Form card styling */
+.form-container {
+  background: rgba(255, 255, 255, 0.25); /* Transparent white */
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 600px;
+  max-width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Main container for sidebar and content */
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background-color: #6D9886;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(10px);
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 60px 40px;
+  overflow-y: auto;
+}
+
+/* Form container */
+
+.form-container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 40px 30px;
+  border-radius: 15px;
+  width: 600px;
+  max-width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading */
+.form-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2e5f54;
+  margin-bottom: 30px;
+}
+
+/* Labels */
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: 500;
+}
+
+/* Inputs, Select, Textarea */
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Button */
+button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.sidebar .logo-with-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.sidebar-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+.logo-with-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.sidebar-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover;
+}

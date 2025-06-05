@@ -1,0 +1,280 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #6D9886, #557C55);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h2 {
+    margin-bottom: 30px;
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translateX(10px);
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background: #f4f4f4;
+    overflow-y: auto;
+}
+
+.content h1 {
+    margin-bottom: 20px;
+}
+
+#room-info {
+    background: white;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+.ideas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.idea {
+    width: calc(50% - 20px);
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.idea img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    background: #f0f4f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#room-info {
+    margin-bottom: 30px;
+    font-size: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ideas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.idea {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.idea img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.idea h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.idea p {
+    font-size: 16px;
+    color: #555;
+}
+
+.sidebar .logo-with-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.sidebar-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+.logo-with-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.sidebar-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover;
+}
+.idea {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.idea:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.idea img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.idea h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+}
+
+.idea p {
+    font-size: 17px;
+    color: #666;
+    line-height: 1.5;
+}
+.idea {
+    width: 300px; /* Fixed width matching image */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.idea:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.idea img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+
+.idea h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+    font-weight: 600;
+}
+
+.idea p {
+    font-size: 17px;
+    color: #666;
+    line-height: 1.5;
+}
+.ideas-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* aligns items to the left */
+}
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #2ecc71;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+}

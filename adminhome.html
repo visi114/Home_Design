@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="adminhome.css" />
+</head>
+<body>
+  <div class="admin-container">
+    
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo-with-title">
+        <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+        <h2>ZORO ADMIN</h2>
+      </div>
+      <hr>
+      <nav>
+        <ul>
+         
+          <li><a href="#">Users</a></li>
+          <li><a href="#">Room Plans</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Settings</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Header -->
+      <header class="topbar">
+        <span>Welcome, Admin</span>
+        <button id="logoutBtn">Logout</button>
+      </header>
+
+      <!-- Dashboard Overview -->
+      <section class="dashboard">
+        <h1>Dashboard Overview</h1>
+        <div class="cards">
+  <!-- Total Users Card -->
+   <div class="card" onclick="location.href='adminusers.html'">
+  <h3>👥 Total Users</h3>
+  <p id="userCount">0</p> <!-- This will update dynamically -->
+</div>
+
+  <!-- Room Plans Card -->
+  <div class="card" onclick="location.href='adminroomplans.html'">
+    <h3>🛋️ Room Plans</h3>
+    <p id="total-plans">45</p>
+  </div>
+
+  <!-- Wishlist Items Card -->
+  <div class="card" onclick="location.href='adminwishlist.html'">
+    <h3>❤️ Wishlist Items</h3>
+    <p id="total-wishlist">78</p>
+  </div>
+</div>
+
+        </div>
+      </section>
+    </main>
+    
+  </div>
+
+  <script src="adminhome.js"></script>
+</body>
+</html>

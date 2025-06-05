@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.logo-container {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.logo {
+  height: 80px;
+}
+
+.dashboard {
+  padding: 30px;
+}

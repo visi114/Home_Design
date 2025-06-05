@@ -1,0 +1,378 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #6d9886, #557c55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  position: fixed; /* Fixed sidebar for scrolling pages */
+  height: 100vh;
+  z-index: 2;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  transition: 0.3s;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sidebar ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: translateX(10px);
+}
+/* mood.css - Mood Board Specific Styles */
+
+/* Mood Board Container */
+.moodboard-container {
+  align-items: center;
+  width: 80%;
+  max-width: 1500px;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.moodboard-container h1 {
+  color: #557c55;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/* Mood Board Controls */
+.moodboard-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.moodboard-controls .btn {
+  padding: 12px 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Mood Board Canvas */
+.moodboard {
+  min-height: 400px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 2px dashed #ccc;
+  margin-bottom: 30px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 15px;
+  position: relative;
+  max-width: 150%;
+  justify-content: center;
+}
+.main-content,
+.mood-board {
+  margin-left: 450px; /* Leaves space for sidebar */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically if needed */
+  min-height: 100vh;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  min-height: 200vh;
+  background: linear-gradient(
+    135deg,
+    #a8edea,
+    #fed6e3
+  ); /* Soft pastel gradient */
+}
+
+.mood-image {
+  width: 150px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+/* Mood Board Items */
+.moodboard-item {
+  position: relative;
+  cursor: move;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.moodboard-item:hover {
+  transform: scale(1.02);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.moodboard-item img {
+  max-width: 200px;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: cover;
+  display: block;
+}
+
+.moodboard-item .color-swatch {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+
+.moodboard-item .note {
+  width: 200px;
+  padding: 15px;
+  background-color: #fff9c4;
+  border-radius: 8px;
+  border-left: 4px solid #ffd54f;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* Delete Button for Items */
+.moodboard-item .delete-item {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #e74c3c;
+  color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0;
+  transition: opacity 0.2s;
+  border: none;
+  z-index: 20;
+}
+
+.moodboard-item:hover .delete-item {
+  opacity: 1;
+}
+
+/* Color Palette Section */
+.color-palette {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.color-palette h3 {
+  margin-bottom: 15px;
+  color: #557c55;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.color-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.color-option {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border: 2px solid white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.color-option:hover {
+  transform: scale(1.1);
+}
+
+/* Note Modal */
+.note-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+}
+
+.note-modal-content {
+  background-color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.note-modal h3 {
+  margin-bottom: 15px;
+  color: #557c55;
+}
+
+.note-modal textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.note-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Responsive Design for Mood Board */
+@media (max-width: 768px) {
+  .moodboard-container {
+    padding: 20px;
+  }
+
+  .moodboard {
+    min-height: 300px;
+    padding: 15px;
+  }
+
+  .moodboard-item img,
+  .moodboard-item .note {
+    max-width: 150px;
+  }
+
+  .moodboard-item .color-swatch {
+    width: 120px;
+    height: 120px;
+  }
+
+  .moodboard-controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .moodboard-controls .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .moodboard-item img,
+  .moodboard-item .note {
+    max-width: 120px;
+  }
+
+  .moodboard-item .color-swatch {
+    width: 100px;
+    height: 100px;
+  }
+
+  .color-options {
+    gap: 8px;
+  }
+
+  .color-option {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.sidebar .logo-with-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.sidebar-logo {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+}
+.logo-with-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.sidebar-logo {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; /* Makes it circular */
+  object-fit: cover;
+}
+/* Make images appear as swatches */
+.swatch-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}
+
+/* Color Swatches */
+.color-swatch {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}

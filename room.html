@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Planner</title>
+    <link rel="stylesheet" href="room.css">
+</head>
+<body>
+  <body>
+  <div class="main-container"> <!-- Wrapper added here -->
+    
+    <div class="sidebar">
+      <div class="logo-with-title">
+        <img src="images/logo.png" alt="Logo" class="sidebar-logo">
+        <h2>ZORO</h2>
+      </div>
+      <hr>
+      <ul>
+        <li><a href="index.html">🏠 Home</a></li>
+        <li><a href="room.html">🛋️ Room Planner</a></li>
+        <li><a href="mood.html">🎨 Mood Board</a></li>
+        <li><a href="wishlist.html">❤️ Wishlist</a></li>
+        <li><a href="contact.html">✉️ Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="main-content">
+      <div class="form-container">
+        <h1>Room Details</h1>
+        <form id="room-form" action="result.html" method="GET">
+          <label for="length">Length (feet):</label>
+          <input type="number" id="length" name="length" required>
+
+          <label for="breadth">Breadth (feet):</label>
+          <input type="number" id="breadth" name="breadth" required>
+
+          <label for="height">Height (feet):</label>
+          <input type="number" id="height" name="height" required>
+
+          <label for="style">Select Room Style:</label>
+          <select id="style" name="style" required>
+            <option value="Modern">Modern</option>
+            <option value="Minimalist">Minimalist</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Boho">Boho</option>
+            <option value="Industrial">Industrial</option>
+          </select>
+
+          <label for="area">Area (sq ft):</label>
+          <input type="number" id="area" name="area" required>
+
+          <button type="submit">Get Suggestions</button>
+        </form>
+      </div>
+    </div>
+
+  </div> <!-- End of main-container -->
+</body>
+</html>
